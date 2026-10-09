@@ -1,0 +1,30 @@
+/* General style for paragraphs and headers on the page*/
+p {
+    color: blue;
+    font-size: 14px;
+}
+h2 {
+    color: darkred;
+    font-size: 16px;
+}
+
+/*Table style, adding borders to the table*/
+table, td, th {
+    border-style: solid;
+    border-width: 3px;
+    border-color: rebeccapurple;
+}
+/*special box and paragraph rules for emphasis*/
+#bright-paragraph {
+    color: coral;
+    font-weight: bold;
+}
+.bright-box {
+    background-color: yellow;
+    padding: 10px;
+}
+
+img.logo {
+    width: 267px;
+    height: 72px;
+}
