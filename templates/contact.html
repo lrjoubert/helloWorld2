@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+{% block title %} Contact Information {% endblock %}
+{% block content %}
+    <!--If the form had been submitted, the website returns the information that was submitted-->
+{% if form_submitted %}
+<h2> Here is the information you entered:</h2>
+    <p>First Name:</p>
+    <p>{{ request.form.get('firstName') }}</p>
+    <p>Last Name:</p>
+    <p>{{ request.form.get('lastName') }}</p>
+    <p>Email:</p>
+    <p>{{ request.form.get('email') }}</p>
+    <p>Favorite Color:</p>
+    <p>{{ request.form.get('favoriteColor') }}</p>
+
+{% else %}
+    <!--THe website shows this contact form to users who have not already submitted-->
+<h2>Contact Information </h2>
+<form method="post">
+  <div class="row">
+    <div class="col">
+      <label for="inputfirstName">First Name</label>
+      <input type="text" class="form-control" id="inputfirstName" name="firstName">
+    </div>
+    <div class="col">
+      <label for="inputlastName">Last Name</label>
+      <input type="text" class="form-control" id="inputlastName" name="lastName">
+    </div>
+  </div>
+  <div class="row">
+    <div class="col">
+      <label for="inputemail">Email</label>
+      <input type="email" class="form-control" id="inputemail" name="email">
+    </div>
+    <div class="col">
+      <label for="inputfavoriteColor">Favorite Color</label>
+      <input type="text" class="form-control" id="inputfavoriteColor" name="favoriteColor">
+    </div>
+  </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+{% endif %}
+{%  endblock %}
