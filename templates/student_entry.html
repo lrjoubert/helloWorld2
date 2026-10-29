@@ -46,7 +46,7 @@
     {% if action and action in ['create', 'update'] %}
     <input type="email" class="form-control" id="email" name="email" maxlength="100" value="{{ student['email'] if student else '' }}" required>
     {% else %}
-        <br>{{ student['last_name'] }}
+        <br>{{ student['email'] }}
     {% endif %}
   </div>
   <div class="col-md-4">
@@ -109,9 +109,7 @@
             <br>{{ 'Yes' if student and student['is_honors'] == True else 'No' }}
             {% endif %}
       </label>
-  </div>
-
-
+      </div>
   </div>
   <div class="col-12 text-center">
     {% if action and action in ['create', 'update'] %}
