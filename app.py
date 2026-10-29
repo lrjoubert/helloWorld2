@@ -46,6 +46,7 @@ def student_create():
     elif request.method == 'POST':
         first_name = request.form['first_name']
         last_name = request.form['last_name']
+        email = request.form['email']
         major_id = request.form['major_id']
 
         birth_date = request.form['birth_date']
