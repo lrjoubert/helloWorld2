@@ -107,8 +107,9 @@
           <strong>Is this an honors student?</strong>
             {% if action and not(action in ['create', 'update']) %}
             <br>{{ 'Yes' if student and student['is_honors'] == True else 'No' }}
+            </label>
             {% endif %}
-      </label>
+
       </div>
   </div>
   <div class="col-12 text-center">
